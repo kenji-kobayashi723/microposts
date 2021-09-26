@@ -185,6 +185,9 @@ class User extends Authenticatable
         }
     }
     
+    /**
+     * $micropostIdで指定されたお気に入りにがこのユーザのお気に入りにしてあるか
+     */
     public function is_favorites($micropostId)
     {
         return $this->favorites()->where('micropost_id', $micropostId)->exists();
